@@ -1,7 +1,7 @@
 {
   "name": "vocab-card-extension",
   "version": "0.1.0",
-  "description": "My Chrome Extension",
+  "description": "A Chrome extension to help you make vocab-cards",
   "private": true,
   "scripts": {
     "watch": "webpack --mode=development --watch --config config/webpack.config.js",

@@ -22,43 +22,31 @@ body {
 .app {
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  text-align: center;
   padding: 20px;
 }
 
-.title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.subtitle {
-  font-size: 12px;
+.form-group {
+  display: inline-flex;
+  flex-direction: column;
+
 }
 
-code {
-  font-size: 12px;
-  font-family: inherit;
-  background-color: rgba(254, 237, 185, 0.3);
-  padding: 2px 4px;
-  border-radius: 2px;
+form textarea {
+  width: 100%;
 }
 
-.counter-label {
-  font-size: 12px;
-  margin-bottom: 5px;
-}
-
-.counter {
-  font-size: 36px;
-  font-weight: 700;
-}
-
-.button-container {
-  margin-top: 15px;
+.card-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .button {
@@ -67,11 +55,11 @@ code {
   padding: 10px 20px;
   margin-right: 4px;
   margin-left: 4px;
-  background-color: bisque;
-  font-size: 16px;
+  background-color: #1976d2;
+  color: white;
   cursor: pointer;
   border-radius: 4px;
-  text-decoration: none;
+  text-transform: uppercase;
   transition: transform 0.2s ease;
   user-select: none;
 }
@@ -81,12 +69,6 @@ code {
 }
 
 .button:hover {
-  transform: scale(1.1);
-}
-
-.divider {
-  margin: 30px auto 25px;
-  width: 50px;
-  border: 0.5px dashed #000;
-  opacity: 0.1;
+  background-color: rgb(21, 101, 192);
+  box-shadow:rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
 }
