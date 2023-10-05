@@ -9,14 +9,12 @@
 /* normalize css ends here */
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif;
+  font-family: Inter Var, Inter, sans-serif;
   color: #222;
 }
 
 body {
   width: 350px;
-  height: 300px;
 }
 
 .app {
@@ -27,19 +25,29 @@ body {
 }
 
 .card {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  gap: 5px;
 }
 
 .form-group {
   display: inline-flex;
   flex-direction: column;
-
 }
 
 form textarea {
   width: 100%;
+}
+
+input,
+textarea {
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+  font: inherit;
+  font-size: 14px;
+  transition: border 0.2s ease;
 }
 
 .card-actions {
@@ -53,8 +61,6 @@ form textarea {
   border: 0;
   display: inline-block;
   padding: 10px 20px;
-  margin-right: 4px;
-  margin-left: 4px;
   background-color: #1976d2;
   color: white;
   cursor: pointer;
@@ -70,5 +76,6 @@ form textarea {
 
 .button:hover {
   background-color: rgb(21, 101, 192);
-  box-shadow:rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+    rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
 }

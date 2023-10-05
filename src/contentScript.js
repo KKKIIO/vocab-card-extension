@@ -13,9 +13,17 @@
 
 // Listen for message
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  if (request.action === 'getSelectedText') {
+  if (request.action === 'getContextFromPage') {
+    // get selected text
     const selectedText = window.getSelection().toString();
-    sendResponse({ selectedText: selectedText });
+    // get page url and title
+    const pageUrl = window.location.href;
+    const pageTitle = document.head.getElementsByTagName('title')[0].innerHTML;
+    sendResponse({
+      selectedText,
+      pageUrl,
+      pageTitle,
+    });
   }
 
   // Send an empty response
