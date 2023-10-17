@@ -28,6 +28,9 @@ import './popup.css';
     // Handle form submission
     cardForm.addEventListener('submit', function (e) {
       e.preventDefault();
+      // disable the submit button
+      const submitButton = cardForm.querySelector('button[type="submit"]');
+      submitButton.setAttribute('disabled', 'true');
 
       // Collect form data
       const formData = new FormData(cardForm);
@@ -43,6 +46,9 @@ import './popup.css';
       chrome.runtime.sendMessage(
         { action: 'createCard', data },
         function (response) {
+          // Re-enable the submit button
+          submitButton.removeAttribute('disabled');
+
           if (response && !response.error) {
             resultContainer.textContent = 'Card created successfully!';
             // Optionally, you can close the popup or perform other actions here.
