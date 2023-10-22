@@ -7,7 +7,7 @@
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.action === 'createCard') {
     // Retrieve the API endpoint URL from Chrome Storage
-    const apiEndpoint = 'http://localhost:3000/api/cards'; // TODO: Replace with production API endpoint
+    const apiEndpoint = 'https://vcard.kkkiiox.work/api/cards';
     const payload = JSON.stringify(request.data);
     console.log(`Sending request to ${apiEndpoint}, payload=${payload}}`);
     // Send a POST request to the web app's API

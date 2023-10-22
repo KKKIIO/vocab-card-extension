@@ -21,7 +21,7 @@
     "storage"
   ],
   "host_permissions": [
-    "http://localhost:3000/api/*"
+    "https://vcard.kkkiiox.work/api/*"
   ],
   "content_scripts": [
     {
