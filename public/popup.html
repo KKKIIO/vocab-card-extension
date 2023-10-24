@@ -15,7 +15,7 @@
             name="source_name"
             type="text"
             style="margin-top: 4px"
-          ></input>
+          />
         </div>
         <div class="form-group">
           <label for="source_url">Source Url</label>
@@ -24,14 +24,14 @@
             name="source_url"
             type="text"
             style="margin-top: 4px"
-          ></input>
+          />
         </div>
-        <div class="form-group">
+        <div class="form-group" style="flex-grow: 1">
           <label for="text">Text</label>
           <textarea
             id="text"
             name="text"
-            style="margin-top: 4px"
+            style="margin-top: 4px; resize: none; flex-grow: 1"
             rows="6"
           ></textarea>
         </div>
@@ -39,9 +39,11 @@
           <button type="submit" class="button">Create Card</button>
         </div>
       </form>
-      <div id="result"></div>
+      <div id="submit_success" class="hidden">
+        <h2>Card Created!</h2>
+      </div>
+      <div id="submit_error" class="hidden"></div>
     </div>
-
     <script src="popup.js"></script>
   </body>
 </html>

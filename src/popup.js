@@ -8,7 +8,8 @@ import './popup.css';
     const sourceUrlInput = document.getElementById('source_url');
     const textInput = document.getElementById('text');
     const cardForm = document.getElementById('card_form');
-    const resultContainer = document.getElementById('result');
+    const successContainer = document.getElementById('submit_success');
+    const errorContainer = document.getElementById('submit_error');
 
     // Load selected text into the text input
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
@@ -50,10 +51,14 @@ import './popup.css';
           submitButton.removeAttribute('disabled');
 
           if (response && !response.error) {
-            resultContainer.textContent = 'Card created successfully!';
-            // Optionally, you can close the popup or perform other actions here.
+            successContainer.classList.remove('hidden');
+            successContainer.classList.add('center', 'full');
+            // hide others
+            cardForm.classList.add('hidden');
+            errorContainer.classList.add('hidden');
           } else {
-            resultContainer.textContent = `Failed to create card: ${response?.error}`;
+            errorContainer.classList.remove('hidden');
+            errorContainer.textContent = `Failed to create card: ${response?.error}`;
           }
         }
       );
